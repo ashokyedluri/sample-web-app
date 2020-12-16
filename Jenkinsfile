@@ -14,7 +14,6 @@ pipeline{
                       script{
 		    	    sh "mvn clean install"
                  	}
-
                	 }  
               }	
 		
