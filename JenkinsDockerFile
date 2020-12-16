@@ -40,7 +40,7 @@ pipeline{
                 {
               steps{
                   script{
-		  sh 'cp -r ../commit-based-job@2/target .'
+		  sh 'cp -r ../commit-job@2/target .'
                   sh 'docker build . -t yedluri/devops-training:$Docker_tag'
 		  withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {			    
 				  sh 'docker login -u yedluri -p $docker_password'
