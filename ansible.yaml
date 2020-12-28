@@ -1,6 +1,4 @@
 - hosts: test
-  ansible_connection: ssh
-  ansible_user: root
   tasks:
   - name: copy deployment file to kubernetes master 
     copy:
