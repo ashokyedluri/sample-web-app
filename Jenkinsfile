@@ -34,10 +34,6 @@ pipeline{
 				     echo ${final_tag}test
 				     sed -i "s/docker_tag/$final_tag/g"  deployment.yaml
 				     '''
-				    [all:vars]
-                                    ansible_connection=ssh
-                                    ansible_user=root
-                                    ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 			            ansiblePlaybook become: true, installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
 				}
 			}
