@@ -1,8 +1,8 @@
 - hosts: test
-  ansible_connection=ssh
-  ansible_user=root
-  ansible_sudo=true
-  ansible_become=true
+  ansible_connection: ssh
+  ansible_user: root
+  ansible_sudo: true
+  ansible_become: true
   ansible_ssh_common_args='-o StrictHostKeyChecking=no'
   tasks:
   - name: copy deployment file to kubernetes master 
